@@ -549,3 +549,108 @@ textarea {
     }
     
 }
+
+@media screen and (max-width: 391px) {
+    .open-menu,
+    .close-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .open-menu {
+        color: rgb(117, 4, 108);
+
+    }
+
+    header {
+        position: fixed;
+        width: 390px;
+    }
+
+    .close-menu {
+        color: #d8adf6ec;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        /* right: -100%;  */
+        bottom: 0;
+        background-color: #1c1c1c;
+        /* padding: 2rem; */
+        color: rgb(117, 4, 108);
+        transition: right 0.3s ease;
+    }
+
+    .nav.visible {
+        position: fixed;
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #d8adf6ec;
+    }
+
+    .avatarForm {
+        display: none;
+    }
+
+    .avatar img {
+        width: 200px;
+        height: auto;
+    }
+    
+    .icons img {
+        width: 300px;
+    }
+
+    .hardSkillsDetails {
+        width: 80%;
+        height: auto;
+        background-image: linear-gradient(45deg, rgb(160,118,245), rgb(160,118,249));
+        padding: 10px;
+        margin-bottom: auto;
+        border-radius: 10px;
+    }
+
+    .divSkills {
+        border: none;
+        border-radius: 5px;
+        width: 90%;
+        height: auto;
+        margin: 10px;
+        padding: 10px;
+        background-color: rgb(160,118,249);
+        
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center;  */
+    }
+
+    .educationTitle {
+        text-align: center;
+    }
+
+    .educationTitle h3 {
+        padding-bottom: 0px;
+        padding-top: 60px;
+    }
+
+    .form {
+        padding-right: 0px;
+    }
+    
+}
