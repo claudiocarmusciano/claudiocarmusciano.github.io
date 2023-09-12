@@ -21,7 +21,7 @@
     src: url('../fonts/WorkSans-Thin.ttf');
 }
 
-header {
+.header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -550,7 +550,20 @@ textarea {
     
 }
 
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 390px) {
+    * {
+        display: block;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    header {
+        max-width: 390px;
+        margin: 0;
+    }
+
     .open-menu,
     .close-menu {
         display: block;
@@ -565,11 +578,6 @@ textarea {
 
     }
 
-    header {
-        position: fixed;
-        width: 390px;
-    }
-
     .close-menu {
         color: #d8adf6ec;
     }
@@ -577,16 +585,16 @@ textarea {
     .nav {
         position: fixed;
         top: 0;
-        /* right: -100%;  */
+        right: -100%; 
         bottom: 0;
+        width: 100%;
         background-color: #1c1c1c;
-        /* padding: 2rem; */
+        padding: 2rem;
         color: rgb(117, 4, 108);
         transition: right 0.3s ease;
     }
 
     .nav.visible {
-        position: fixed;
         opacity: 1;
         visibility: visible;
         right: 0;
@@ -603,50 +611,29 @@ textarea {
         color: #d8adf6ec;
     }
 
-    .avatarForm {
-        display: none;
-    }
-
-    .avatar img {
-        width: 200px;
-        height: auto;
-    }
-    
-    .icons img {
-        width: 300px;
-    }
-
     .hardSkillsDetails {
-        width: 80%;
+        
+        width: 90%;
         height: auto;
         background-image: linear-gradient(45deg, rgb(160,118,245), rgb(160,118,249));
-        padding: 10px;
+        padding: 30px;
         margin-bottom: auto;
         border-radius: 10px;
     }
 
-    .divSkills {
-        border: none;
-        border-radius: 5px;
-        width: 90%;
-        height: auto;
-        margin: 10px;
-        padding: 10px;
-        background-color: rgb(160,118,249);
-        
-        display: flex; 
-        flex-direction: column;
-        align-items: center;
-        /* justify-content: center;  */
+    .imagesSkills {
+        display: flex;
+        flex-direction: row;
     }
 
-    .educationTitle {
-        text-align: center;
+    .logosSocialNetworks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-    .educationTitle h3 {
-        padding-bottom: 0px;
-        padding-top: 60px;
+    .avatarForm {
+        display: none;
     }
 
     .form {

@@ -85,7 +85,7 @@ document.getElementById("backend").addEventListener("click", function(event) {
     img1.src = "images/java.png";
     img2.src = "images/js.svg";
     img3.src = "images/php-1-logo-svgrepo-com.svg";
-    img4.src = " ";
+    img4.style.display = "none";
 });
 
 document.getElementById("develop").addEventListener("click", function(event) {
@@ -104,7 +104,7 @@ document.getElementById("develop").addEventListener("click", function(event) {
     img1.src = "images/java.png";
     img2.src = "images/js.svg";
     img3.src = "images/python.png";
-    img4.src = " ";
+    img4.style.display = "none";
 });
 
 document.getElementById("tools").addEventListener("click", function(event) {
@@ -138,9 +138,9 @@ document.getElementById("metodologies").addEventListener("click", function(event
     }
     title.textContent = "Metodologies";
     img1.src = "images/scrum.svg";
-    img2.src = " ";
-    img3.src = " ";
-    img4.src = " ";
+    img2.style.display = "none";
+    img3.style.display = "none";
+    img4.style.display = "none";
 });
 
 
