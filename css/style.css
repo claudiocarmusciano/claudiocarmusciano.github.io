@@ -603,13 +603,28 @@ textarea {
         color: #d8adf6ec;
     }
 
+    .title h3 {
+        padding-top: 80px;
+        font-size: xx-large;
+    }
+    
+    .subtitle {
+        font-size: 120%;
+        font-weight:900;
+    }
+
     .avatarForm {
         display: none;
     }
 
     .avatar img {
-        width: 200px;
+        width: 150px;
         height: auto;
+    }
+
+    .icons {
+        padding-top: 0px;
+        margin-top: 0;
     }
     
     .icons img {
