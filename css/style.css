@@ -493,7 +493,11 @@ textarea {
     font-size: larger;
 }
 
-@media screen and (max-width: 819px) {
+@media screen and (max-width: 821px) {
+
+    *{
+        max-width: 820;
+    }
     .open-menu,
     .close-menu {
         display: block;
@@ -506,6 +510,11 @@ textarea {
     .open-menu {
         color: rgb(117, 4, 108);
 
+    }
+
+    header {
+        position: fixed;
+        max-width: px;
     }
 
     .close-menu {
