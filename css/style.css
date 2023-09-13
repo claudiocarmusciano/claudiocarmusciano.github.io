@@ -153,9 +153,9 @@
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.7)
+        180deg,
         rgba(215,187,245,0.7),
+        rgba(0,0,0,0.7)
     ), url(../images/backSocialNetwors.jpg);
     background-size: cover;
     background-position: center;
@@ -493,11 +493,7 @@ textarea {
     font-size: larger;
 }
 
-@media screen and (max-width: 821px) {
-
-    *{
-        max-width: 820;
-    }
+@media screen and (max-width: 819px) {
     .open-menu,
     .close-menu {
         display: block;
@@ -510,11 +506,6 @@ textarea {
     .open-menu {
         color: rgb(117, 4, 108);
 
-    }
-
-    header {
-        position: fixed;
-        max-width: px;
     }
 
     .close-menu {
