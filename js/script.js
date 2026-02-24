@@ -45,19 +45,19 @@ function handleLinkClick(event) {
     event.target.classList.add("selected");
 }
 
-document.getElementById("frontend").addEventListener("click", function(event) {
-    event.preventDefault(); 
+document.getElementById("frontend").addEventListener("click", function (event) {
+    event.preventDefault();
 
     const frontend = document.getElementById("frontend");
-    const links = document.querySelectorAll(".hardSkillsAnchors a");    
+    const links = document.querySelectorAll(".hardSkillsAnchors a");
     links.forEach(link => link.addEventListener("click", handleLinkClick));
-    
-    if (language=='en') {
+
+    if (language == 'en') {
         text.textContent = "It attracts me because it is the area that has a direct relationship with the client. I consider my knowledge of native HTML and CSS important. Regarding frameworks, I have knowledge of Bootstrap and VUE.";
-    } else if (language=='sp') {
+    } else if (language == 'sp') {
         text.textContent = "Me atrae porque es el área que tiene una relación directa con el cliente. Considero importante mi conocimiento de HTML nativo y CSS. En cuanto a frameworks, tengo conocimientos de Bootstrap y VUE.";
     }
-        
+
     title.textContent = "Front-End";
     inicializar_img();
     img1.src = "images/html.png";
@@ -70,13 +70,13 @@ document.getElementById("frontend").addEventListener("click", function(event) {
 frontend.click();
 
 
-document.getElementById("backend").addEventListener("click", function(event) {
-    event.preventDefault(); 
+document.getElementById("backend").addEventListener("click", function (event) {
+    event.preventDefault();
 
-    const links = document.querySelectorAll(".hardSkillsAnchors a");    
+    const links = document.querySelectorAll(".hardSkillsAnchors a");
     links.forEach(link => link.addEventListener("click", handleLinkClick));
-    
-    if (language=='en') {
+
+    if (language == 'en') {
         text.textContent = "Strong knowledge of back-end languages such as Java for versatile development, JavaScript for dynamic interactivity, and PHP for web implementations and server-side functionality.";
     } else {
         text.textContent = "Fuerte conocimiento de lenguajes de back-end como Java para desarrollo versátil, JavaScript para interactividad dinámica y PHP para implementaciones web y funcionalidad del lado del servidor.";
@@ -90,13 +90,13 @@ document.getElementById("backend").addEventListener("click", function(event) {
     img4.style.display = "none";
 });
 
-document.getElementById("develop").addEventListener("click", function(event) {
-    event.preventDefault(); 
+document.getElementById("develop").addEventListener("click", function (event) {
+    event.preventDefault();
 
-    const links = document.querySelectorAll(".hardSkillsAnchors a");    
+    const links = document.querySelectorAll(".hardSkillsAnchors a");
     links.forEach(link => link.addEventListener("click", handleLinkClick));
-    
-    if (language=='en') {   
+
+    if (language == 'en') {
         text.textContent = "Knowledge of development languages, including Java, JavaScript and Python for agile development and efficient solutions. As well as different techniques, methods and algorithms, among others.";
     } else {
         text.textContent = "Conocimiento de lenguajes de desarrollo, incluidos Java, JavaScript y Python para un desarrollo ágil y soluciones eficientes. Así como diferentes técnicas, métodos y algoritmos, entre otros.";
@@ -110,13 +110,13 @@ document.getElementById("develop").addEventListener("click", function(event) {
     img4.style.display = "none";
 });
 
-document.getElementById("tools").addEventListener("click", function(event) {
-    event.preventDefault(); 
+document.getElementById("tools").addEventListener("click", function (event) {
+    event.preventDefault();
 
-    const links = document.querySelectorAll(".hardSkillsAnchors a");    
+    const links = document.querySelectorAll(".hardSkillsAnchors a");
     links.forEach(link => link.addEventListener("click", handleLinkClick));
-    
-    if (language=='en') {
+
+    if (language == 'en') {
         text.textContent = "Knowledge of tools like Git for version control, GitHub for repository collaboration, Trello for project management, and Draw.io for creating diagrams and visualizing ideas, among others.";
     } else {
         text.textContent = "Conocimiento de herramientas como Git para control de versiones, GitHub para colaboración de repositorios, Trello para gestión de proyectos y Draw.io para creación de diagramas y visualización de ideas, entre otras."
@@ -129,13 +129,13 @@ document.getElementById("tools").addEventListener("click", function(event) {
     img4.src = "images/Diagrams.net_Logo.svg.png";
 });
 
-document.getElementById("metodologies").addEventListener("click", function(event) {
-    event.preventDefault(); 
+document.getElementById("metodologies").addEventListener("click", function (event) {
+    event.preventDefault();
 
-    const links = document.querySelectorAll(".hardSkillsAnchors a");    
+    const links = document.querySelectorAll(".hardSkillsAnchors a");
     links.forEach(link => link.addEventListener("click", handleLinkClick));
-    
-    if (language=='en') {
+
+    if (language == 'en') {
         text.textContent = "Knowledge of development methodologies, highlighting Scrum. Study of agile teams, sprints, planning and monitoring to deliver projects in a collaborative and efficient way.";
     } else {
         text.textContent = "Conocimiento de metodologías de desarrollo, destacando Scrum. Estudio de equipos ágiles, sprints, planificación y seguimiento para entregar proyectos de forma colaborativa y eficiente.";
@@ -193,6 +193,10 @@ const translations = {
         en: "Skills",
         sp: "Habilidades"
     },
+    'projects-a': {
+        en: "Projects",
+        sp: "Proyectos"
+    },
 
     'education-a': {
         en: "Education",
@@ -205,8 +209,8 @@ const translations = {
     },
 
     subtitle: {
-        en: "I love what I do and enjoy what I do.",
-        sp: "Amo lo que hago y disfruto lo que hago."
+        en: "I love what I do, I enjoy what I do.",
+        sp: "Amo lo que hago, disfruto lo que hago."
     },
 
     titleAboutMe: {
@@ -368,6 +372,14 @@ const translations = {
         en: "Contact Me",
         sp: "Contáctame"
     },
+    projectsTitle: {
+        en: "Projects",
+        sp: "Proyectos"
+    },
+    projectsPlaceholder: {
+        en: "Coming soon... I am working on some exciting projects to showcase here!",
+        sp: "Próximamente... ¡Estoy trabajando en proyectos emocionantes para mostrar aquí!"
+    },
 
     name: {
         en: "Name:",
@@ -379,7 +391,7 @@ const translations = {
         sp: "Correo electrónico:"
     },
 
-    message: { 
+    message: {
         en: "Message:",
         sp: "Mensaje:"
     },
@@ -394,10 +406,10 @@ const translations = {
 
 function updateLanguage(language) {
     for (const key in translations) {
-      const element = document.getElementById(key);
-      if (element) {
-        element.innerHTML = translations[key][language];
-      }
+        const element = document.getElementById(key);
+        if (element) {
+            element.innerHTML = translations[key][language];
+        }
     }
 }
 
