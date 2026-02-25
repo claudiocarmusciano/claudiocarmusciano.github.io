@@ -170,8 +170,8 @@ document.getElementById("metodologies").addEventListener("click", function (even
 
 const translations = {
     principal: {
-        en: "Hi, my name is Claudio Carmusciano. <br> Junior Developer.",
-        sp: "Hola, mi nombre es Claudio Carmusciano. <br> Desarrollador Junior."
+        en: "Hi, my name is Claudio Carmusciano. <br> Full Stack Developer.",
+        sp: "Hola, mi nombre es Claudio Carmusciano. <br> Desarrollador Full Stack."
     },
 
     'home-a': {
