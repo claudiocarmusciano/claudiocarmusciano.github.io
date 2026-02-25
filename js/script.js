@@ -381,6 +381,16 @@ const translations = {
         sp: "Próximamente... ¡Estoy trabajando en proyectos emocionantes para mostrar aquí!"
     },
 
+    project1Title: {
+        en: "Ale Martín - Pastry & Events",
+        sp: "Ale Martín - Repostería y Eventos"
+    },
+
+    project1Description: {
+        en: "Website designed for a professional pastry chef, which also includes sections for comprehensive event decoration. Attached are shots of the gallery and product catalog.",
+        sp: "Sitio web diseñado para una repostera profesional, que incluye también anexos para la decoración integral de eventos. Adjunto capturas de la galería y catálogo de productos."
+    },
+
     name: {
         en: "Name:",
         sp: "Nombre:"
@@ -435,3 +445,42 @@ function inicializar_img() {
     img3.style.display = "inline-block";
     img4.style.display = "inline-block";
 }
+
+// Logic for Image Modal
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.querySelector(".close-modal");
+
+    // Select all gallery images
+    const galleryImages = document.querySelectorAll(".gallery-img");
+
+    galleryImages.forEach(img => {
+        img.addEventListener("click", () => {
+            modal.style.display = "flex";
+            modal.style.justifyContent = "center";
+            modal.style.alignItems = "center";
+            modalImg.src = img.src;
+            document.body.style.overflow = "hidden"; // Prevent scrolling
+        });
+    });
+
+    const closeModal = () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto"; // Restore scrolling
+    };
+
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.style.display === "flex") {
+            closeModal();
+        }
+    });
+});
