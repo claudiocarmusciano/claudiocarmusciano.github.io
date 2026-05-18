@@ -414,6 +414,41 @@ a.selected {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 600px) {
+    .projectsContent {
+        padding: 0 12px;
+        gap: 24px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .project-card h4 {
+        font-size: 1.5rem;
+    }
+
+    .project-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .gallery-img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        object-fit: cover;
+    }
+}
+
 .education {
     background-color: rgb(245, 245, 245);
     display: flex;
