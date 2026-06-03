@@ -391,6 +391,26 @@ const translations = {
         sp: "Sitio web diseñado para una repostera profesional, que incluye también anexos para la decoración integral de eventos. Adjunto capturas de la galería y catálogo de productos."
     },
 
+    project2Title: {
+        en: "Coordinemos",
+        sp: "Coordinemos"
+    },
+
+    project2Description: {
+        en: "App to coordinate padel court bookings among players, featuring schedule management, match organization, and communication between teammates. It makes it easy to set up teams and plan matches in an agile and collaborative way.",
+        sp: "App para coordinar turnos de pádel entre jugadores, con gestión de horarios, organización de partidos y comunicación entre compañeros. Facilita armar equipos y planificar encuentros de forma ágil y colaborativa."
+    },
+
+    project3Title: {
+        en: "PadelAdmin",
+        sp: "PadelAdmin"
+    },
+
+    project3Description: {
+        en: "Application aimed at helping padel clubs set up tournament fixtures, relieving them of the burden of manually handling scheduling constraints and preferences that players may have, as well as managing groups, standings, and elimination brackets.",
+        sp: "Aplicación orientada a ayudar a los clubes de pádel para armar fixture de torneos sacándoles de encima el problema de tener que contemplar a mano las restricciones y preferencias horarias que pueden tener uno o varios jugadores, además de gestionar las zonas, tablas de posiciones y brackets o llaves de fases eliminatorias."
+    },
+
     name: {
         en: "Name:",
         sp: "Nombre:"
