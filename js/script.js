@@ -411,6 +411,16 @@ const translations = {
         sp: "Aplicación orientada a ayudar a los clubes de pádel para armar fixture de torneos sacándoles de encima el problema de tener que contemplar a mano las restricciones y preferencias horarias que pueden tener uno o varios jugadores, además de gestionar las zonas, tablas de posiciones y brackets o llaves de fases eliminatorias."
     },
 
+    project4Title: {
+        en: "CODE Solutions.ar",
+        sp: "CODE Solutions.ar"
+    },
+
+    project4Description: {
+        en: "Startup dedicated to business technology solutions, creating digital products and services to optimize processes, improve user experience, and scale businesses with an innovative, quality-driven approach.",
+        sp: "Start up propia dedicada a soluciones tecnológicas empresariales, desarrollando productos y servicios digitales orientados a optimizar procesos, mejorar la experiencia de usuario y escalar negocios. Sitio web corporativo y portfolio de servicios con enfoque en innovación y calidad."
+    },
+
     name: {
         en: "Name:",
         sp: "Nombre:"
@@ -446,6 +456,13 @@ function updateLanguage(language) {
 const englishFlag = document.querySelector('.englishLanguage');
 const spanishFlag = document.querySelector('.spanishLanguage');
 const hard = document.getElementById('frontend');
+
+// Initialize page language on first load
+// Initialize page language on first load
+    document.addEventListener('DOMContentLoaded', () => {
+        updateLanguage(language);
+        hard.click();
+    });
 
 englishFlag.addEventListener('click', function () {
     language = 'en';
