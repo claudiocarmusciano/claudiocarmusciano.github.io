@@ -967,6 +967,34 @@ a {
     opacity: 1;
 }
 
+/* ===== Toast ===== */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translate(-50%, 140%);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: calc(100vw - 32px);
+    padding: 14px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    color: #1a0730;
+    background: var(--grad);
+    box-shadow: 0 16px 40px -10px var(--accent-glow);
+    transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+
+.toast.show {
+    transform: translate(-50%, 0);
+}
+
+.toast i {
+    font-size: 1.2rem;
+}
+
 /* ===== Reveal animation ===== */
 .reveal {
     opacity: 0;

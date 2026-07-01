@@ -219,6 +219,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+    // Post-submit confirmation (FormSubmit redirects back with ?enviado=1)
+    if (new URLSearchParams(location.search).has("enviado")) {
+        const toast = document.createElement("div");
+        toast.className = "toast";
+        toast.innerHTML = '<i class="bi bi-check-circle-fill"></i> ' +
+            (localStorage.getItem("lang") === "en"
+                ? "Message sent! I'll get back to you soon."
+                : "¡Mensaje enviado! Te respondo a la brevedad.");
+        document.body.appendChild(toast);
+        requestAnimationFrame(() => toast.classList.add("show"));
+        setTimeout(() => toast.classList.remove("show"), 6000);
+        history.replaceState(null, "", location.pathname + location.hash);
+    }
+
     // Language buttons
     document.querySelectorAll(".lang-btn").forEach(btn =>
         btn.addEventListener("click", () => applyLang(btn.dataset.lang)));
