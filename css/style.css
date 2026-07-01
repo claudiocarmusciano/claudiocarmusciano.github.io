@@ -843,8 +843,11 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    max-width: 100%;
     color: var(--text-muted);
     transition: color 0.2s ease;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .contact-links a:hover {
@@ -854,6 +857,7 @@ a {
 .contact-links i {
     color: var(--accent);
     font-size: 1.15rem;
+    flex-shrink: 0;
 }
 
 .contact-form {
