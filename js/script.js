@@ -1,523 +1,301 @@
-const nav = document.querySelector("#nav");
-const open = document.querySelector("#open");
-const close = document.querySelector("#close");
-const title = document.getElementById("hardSkillTitle");
-const text = document.getElementById("hardSkillText");
-const img1 = document.getElementById("img1");
-const img2 = document.getElementById("img2");
-const img3 = document.getElementById("img3");
-const img4 = document.getElementById("img4");
-language = 'en';
+/* ==========================================================================
+   Claudio Carmusciano — Portfolio · interactions & i18n
+   ========================================================================== */
 
-open.addEventListener("click", () => {
-    nav.classList.add("visible");
-})
+// ---------- Translations ----------
+const I18N = {
+    es: {
+        nav_home: "Inicio", nav_skills: "Habilidades", nav_projects: "Proyectos",
+        nav_about: "Sobre mí", nav_education: "Educación", nav_contact: "Contacto", nav_cv: "CV",
 
-close.addEventListener("click", () => {
-    nav.classList.remove("visible");
-})
+        hero_pill: "Disponible para proyectos",
+        hero_hi: "Hola, soy",
+        hero_role: "Desarrollador Full Stack",
+        hero_sub: "Construyo aplicaciones web a medida tipo SaaS —de la idea a producción— combinando ingeniería sólida con features potenciados por IA.",
+        hero_cta1: "Ver proyectos", hero_cta2: "Contactame",
 
-function handleFacebookButtonClick() {
-    var facebookURL = "https://www.facebook.com/claudiocarmu";
-    window.open(facebookURL, "_blank");
-}
+        strip1: "De punta a punta",
+        strip2: "Multi-tenant y por roles",
+        strip3: "En producción, mantenido",
+        strip4: "Aplicada con criterio",
 
-function handleGitHubButtonClick() {
-    var gitHubURL = "https://github.com/claudiocarmusciano";
-    window.open(gitHubURL, "_blank");
-}
+        skills_eyebrow: "Lo que manejo", skills_title: "Habilidades",
+        tab_frontend: "Front-End", tab_backend: "Back-End", tab_develop: "Desarrollo",
+        tab_tools: "Herramientas", tab_methods: "Metodologías",
+        soft_title: "Habilidades blandas",
+        soft_comm_t: "Comunicación",
+        soft_comm_d: "Comunicación efectiva, verbal y no verbal. Saber escuchar, hablar, escribir y leer.",
+        soft_team_t: "Trabajo en equipo",
+        soft_team_d: "Colaborar con otros hacia un objetivo común, comunicando y resolviendo conflictos.",
+        soft_prob_t: "Resolución de problemas",
+        soft_prob_d: "Identificar y resolver problemas: pensar críticamente, hallar la causa raíz y desarrollar soluciones.",
+        soft_resp_t: "Seriedad y responsabilidad",
+        soft_resp_d: "Actitud profesional y compromiso con las tareas y los plazos. Proactivo para resolver y aprender.",
+        soft_adap_t: "Adaptabilidad",
+        soft_adap_d: "Adaptación a los cambios del entorno: ser flexible y aprender de lo nuevo.",
+        soft_emo_t: "Inteligencia emocional",
+        soft_emo_d: "Comprender y gestionar las propias emociones y las de los demás. Empatía y manejo de conflictos.",
 
-function handleInstagramButtonClick() {
-    var instagramURL = "https://www.instagram.com/claudiocarmusciano";
-    window.open(instagramURL, "_blank");
-}
+        projects_eyebrow: "Trabajo real, en producción", projects_title: "Proyectos",
+        p1_t: "Ale Martín — Repostería y Eventos",
+        p1_d: "Sitio web para una repostera profesional, con sección de decoración integral de eventos, galería y catálogo de productos.",
+        p2_t: "Coordinemos",
+        p2_d: "App para coordinar turnos de pádel entre jugadores: gestión de horarios, organización de partidos y comunicación entre compañeros de forma ágil y colaborativa.",
+        p3_t: "PadelAdmin",
+        p3_d: "Plataforma para clubes de pádel: arma el fixture de torneos contemplando restricciones y preferencias horarias de los jugadores, y gestiona zonas, tablas de posiciones y llaves eliminatorias.",
+        p4_t: "CODE Solutions.ar",
+        p4_d: "Startup propia de soluciones tecnológicas empresariales: productos y servicios digitales para optimizar procesos, mejorar la experiencia de usuario y escalar negocios.",
 
-function handleLinkedInButtonClick() {
-    var linkedInURL = "https://www.linkedin.com/in/claudio-carmusciano-ab993224a/";
-    window.open(linkedInURL, "_blank");
-}
+        about_eyebrow: "Sobre mí",
+        about_title: "Ingeniería con foco en el negocio",
+        about_p1: "Me considero una persona con ganas de aprender y emprender: responsable, confiable y con excelente trato. Me apasionan la informática y la tecnología, y disfruto explorar nuevos desafíos.",
+        about_p2: "Entiendo el dominio del negocio antes de programar —reglas, roles y flujos reales— y modelo el software alrededor de eso. Construyo en una rama, pruebo en local, valido con el cliente y recién entonces despliego a producción.",
+        about_v1: "Full-stack de punta a punta",
+        about_v2: "A medida, no genérico",
+        about_v3: "IA aplicada con criterio",
 
-function handleLinkClick(event) {
-    event.preventDefault();
-    const links = document.querySelectorAll(".hardSkillsAnchors a");
+        edu_eyebrow: "Formación", edu_title: "Educación y conocimientos",
+        edu1_t: "Analista de Sistemas",
+        edu2_t: "Técnico Universitario en Desarrollo de Aplicaciones Informáticas",
+        edu_cert: "Ver certificado",
 
-    links.forEach(link => link.classList.remove("selected"));
-    event.target.classList.add("selected");
-}
-
-document.getElementById("frontend").addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const frontend = document.getElementById("frontend");
-    const links = document.querySelectorAll(".hardSkillsAnchors a");
-    links.forEach(link => link.addEventListener("click", handleLinkClick));
-
-    if (language == 'en') {
-        text.textContent = "It attracts me because it is the area that has a direct relationship with the client. I consider my knowledge of native HTML and CSS important. Regarding frameworks, I have knowledge of Bootstrap and VUE.";
-    } else if (language == 'sp') {
-        text.textContent = "Me atrae porque es el área que tiene una relación directa con el cliente. Considero importante mi conocimiento de HTML nativo y CSS. En cuanto a frameworks, tengo conocimientos de Bootstrap y VUE.";
-    }
-
-    title.textContent = "Front-End";
-    inicializar_img();
-    img1.src = "images/html.png";
-    img2.src = "images/css.png";
-    img3.src = "images/bootstrap-4-logo-svgrepo-com.svg";
-    img4.src = "images/vue.svg"
-
-});
-
-frontend.click();
-
-
-document.getElementById("backend").addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const links = document.querySelectorAll(".hardSkillsAnchors a");
-    links.forEach(link => link.addEventListener("click", handleLinkClick));
-
-    if (language == 'en') {
-        text.textContent = "Strong knowledge of back-end languages such as Java for versatile development, JavaScript for dynamic interactivity, and PHP for web implementations and server-side functionality.";
-    } else {
-        text.textContent = "Fuerte conocimiento de lenguajes de back-end como Java para desarrollo versátil, JavaScript para interactividad dinámica y PHP para implementaciones web y funcionalidad del lado del servidor.";
-    }
-
-    title.textContent = "Back-End";
-    inicializar_img();
-    img1.src = "images/java.png";
-    img2.src = "images/js.svg";
-    img3.src = "images/php-1-logo-svgrepo-com.svg";
-    img4.style.display = "none";
-});
-
-document.getElementById("develop").addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const links = document.querySelectorAll(".hardSkillsAnchors a");
-    links.forEach(link => link.addEventListener("click", handleLinkClick));
-
-    if (language == 'en') {
-        text.textContent = "Knowledge of development languages, including Java, JavaScript and Python for agile development and efficient solutions. As well as different techniques, methods and algorithms, among others.";
-    } else {
-        text.textContent = "Conocimiento de lenguajes de desarrollo, incluidos Java, JavaScript y Python para un desarrollo ágil y soluciones eficientes. Así como diferentes técnicas, métodos y algoritmos, entre otros.";
-    }
-
-    title.textContent = "Develop";
-    inicializar_img();
-    img1.src = "images/java.png";
-    img2.src = "images/js.svg";
-    img3.src = "images/python.png";
-    img4.style.display = "none";
-});
-
-document.getElementById("tools").addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const links = document.querySelectorAll(".hardSkillsAnchors a");
-    links.forEach(link => link.addEventListener("click", handleLinkClick));
-
-    if (language == 'en') {
-        text.textContent = "Knowledge of tools like Git for version control, GitHub for repository collaboration, Trello for project management, and Draw.io for creating diagrams and visualizing ideas, among others.";
-    } else {
-        text.textContent = "Conocimiento de herramientas como Git para control de versiones, GitHub para colaboración de repositorios, Trello para gestión de proyectos y Draw.io para creación de diagramas y visualización de ideas, entre otras."
-    }
-    title.textContent = "Tools";
-    inicializar_img();
-    img1.src = "images/git.png";
-    img2.src = "images/github-color-svgrepo-com.svg";
-    img3.src = "images/trello-logo-svgrepo-com.svg";
-    img4.src = "images/Diagrams.net_Logo.svg.png";
-});
-
-document.getElementById("metodologies").addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const links = document.querySelectorAll(".hardSkillsAnchors a");
-    links.forEach(link => link.addEventListener("click", handleLinkClick));
-
-    if (language == 'en') {
-        text.textContent = "Knowledge of development methodologies, highlighting Scrum. Study of agile teams, sprints, planning and monitoring to deliver projects in a collaborative and efficient way.";
-    } else {
-        text.textContent = "Conocimiento de metodologías de desarrollo, destacando Scrum. Estudio de equipos ágiles, sprints, planificación y seguimiento para entregar proyectos de forma colaborativa y eficiente.";
-    }
-    title.textContent = "Metodologies";
-    inicializar_img();
-    img1.src = "images/scrum.svg";
-    img2.style.display = "none";
-    img3.style.display = "none";
-    img4.style.display = "none";
-});
-
-
-// Script for Contact Form //
-
-// const form = document.getElementById("contactForm");
-// form.addEventListener("submit", function(event) {
-//     event.preventDefault();
-
-//     const name = document.getElementById("name").value;
-//     const email = document.getElementById("email").value;
-//     const message = document.getElementById("message").value;
-
-//     if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
-//         alert("Por favor, completa todos los campos.");
-//     } else {
-//         form.submit();
-//     }
-// });
-
-// Translations //
-
-const translations = {
-    principal: {
-        en: "Hi, my name is Claudio Carmusciano. <br> Full Stack Developer.",
-        sp: "Hola, mi nombre es Claudio Carmusciano. <br> Desarrollador Full Stack."
+        contact_eyebrow: "Hablemos", contact_title: "Contame tu proyecto",
+        contact_sub: "¿Tenés una idea o un proceso que hoy funciona a planilla y WhatsApp? Escribime y lo convertimos en software.",
+        form_name: "Nombre", form_email: "Email", form_msg: "Mensaje", form_send: "Enviar mensaje"
     },
+    en: {
+        nav_home: "Home", nav_skills: "Skills", nav_projects: "Projects",
+        nav_about: "About", nav_education: "Education", nav_contact: "Contact", nav_cv: "CV",
 
-    'home-a': {
-        en: "Home",
-        sp: "Inicio"
-    },
+        hero_pill: "Available for projects",
+        hero_hi: "Hi, I'm",
+        hero_role: "Full Stack Developer",
+        hero_sub: "I build custom SaaS-style web applications —from idea to production— pairing solid engineering with AI-powered features.",
+        hero_cta1: "View projects", hero_cta2: "Get in touch",
 
-    'aboutMe-a': {
-        en: "About Me",
-        sp: "Sobre mí"
-    },
+        strip1: "End to end",
+        strip2: "Multi-tenant & role-based",
+        strip3: "In production, maintained",
+        strip4: "Applied with judgment",
 
-    'socialNetworks-a': {
-        en: "Social Networks",
-        sp: "Redes Sociales"
-    },
+        skills_eyebrow: "What I work with", skills_title: "Skills",
+        tab_frontend: "Front-End", tab_backend: "Back-End", tab_develop: "Development",
+        tab_tools: "Tools", tab_methods: "Methodologies",
+        soft_title: "Soft skills",
+        soft_comm_t: "Communication",
+        soft_comm_d: "Effective communication, both verbal and non-verbal. Able to listen, speak, write and read.",
+        soft_team_t: "Teamwork",
+        soft_team_d: "Working with others toward a common goal, communicating and resolving conflicts.",
+        soft_prob_t: "Problem solving",
+        soft_prob_d: "Identify and solve problems: think critically, find root causes and develop solutions.",
+        soft_resp_t: "Seriousness & responsibility",
+        soft_resp_d: "Professional attitude and commitment to tasks and deadlines. Proactive to solve and learn.",
+        soft_adap_t: "Adaptability",
+        soft_adap_d: "Adapting to changes in the environment: being flexible and learning new things.",
+        soft_emo_t: "Emotional intelligence",
+        soft_emo_d: "Understand and manage one's own emotions and those of others. Empathy and conflict management.",
 
-    'skills-a': {
-        en: "Skills",
-        sp: "Habilidades"
-    },
-    'projects-a': {
-        en: "Projects",
-        sp: "Proyectos"
-    },
+        projects_eyebrow: "Real work, in production", projects_title: "Projects",
+        p1_t: "Ale Martín — Pastry & Events",
+        p1_d: "Website for a professional pastry chef, including a full event-decoration section, gallery and product catalog.",
+        p2_t: "Coordinemos",
+        p2_d: "App to coordinate padel bookings among players: schedule management, match organization and communication between teammates in an agile, collaborative way.",
+        p3_t: "PadelAdmin",
+        p3_d: "Platform for padel clubs: builds tournament fixtures accounting for players' scheduling constraints and preferences, and manages groups, standings and elimination brackets.",
+        p4_t: "CODE Solutions.ar",
+        p4_d: "My own startup for business technology solutions: digital products and services to optimize processes, improve UX and scale businesses.",
 
-    'education-a': {
-        en: "Education",
-        sp: "Educación"
-    },
+        about_eyebrow: "About me",
+        about_title: "Engineering with a business focus",
+        about_p1: "I see myself as someone eager to learn and build: responsible, reliable and great to work with. I'm passionate about computing and technology, and I enjoy exploring new challenges.",
+        about_p2: "I understand the business domain before coding —real rules, roles and flows— and model the software around it. I build on a branch, test locally, validate with the client and only then deploy to production.",
+        about_v1: "Full-stack, end to end",
+        about_v2: "Custom, not generic",
+        about_v3: "AI applied with judgment",
 
-    'contactMe-a': {
-        en: "Contact Me",
-        sp: "Contáctame"
-    },
+        edu_eyebrow: "Education", edu_title: "Education & knowledge",
+        edu1_t: "Systems Analyst",
+        edu2_t: "University Technician in Computer Application Development",
+        edu_cert: "View certificate",
 
-    subtitle: {
-        en: "I love what I do, I enjoy what I do.",
-        sp: "Amo lo que hago, disfruto lo que hago."
-    },
-
-    titleAboutMe: {
-        en: "About Me",
-        sp: "Sobre mí"
-    },
-
-    textAboutMe: {
-        en: "I consider myself a person who wants to learn and undertake. My main characteristics: responsible, friendly, helpful, reliable. Excellent interaction with other people. I adapt to all types of respectful work environment. I am passionate about computers and technology. I am excited and eager to explore new possibilities and challenges in my career in order to gain extensive experience in all things programming.",
-        sp: "Me considero una persona con ganas de aprender y emprender. Mis características principales: responsable, amable, servicial, confiable. Excelente interacción con otras personas. Me adapto a todo tipo de ambiente de trabajo respetuoso. Soy un apasionado de la informática y la tecnología. Estoy emocionado y ansioso por explorar nuevas posibilidades y desafíos en mi carrera para obtener una amplia experiencia en todo lo relacionado con la programación."
-    },
-
-    titleSocialNetworks: {
-        en: "My Social Networks",
-        sp: "Mis redes sociales"
-    },
-
-    titleSoftSkills: {
-        en: "Soft Skills",
-        sp: "Habilidades blandas"
-    },
-
-    titleHardSkills: {
-        en: "Hard Skills",
-        sp: "Habilidades duras"
-    },
-
-    communicationSpan: {
-        en: "Communication",
-        sp: "Comunicación"
-    },
-
-    communicationText: {
-        en: "Effective communication with others, both verbal and non-verbal. Ability to listen, speak, write and read.",
-        sp: "Comunicación efectiva con los demás, tanto verbal como no verbal. Habilidad para escuchar, hablar, escribir y leer."
-    },
-
-    teamworkSpan: {
-        en: "Teamwork",
-        sp: "Trabajo en equipo"
-    },
-
-    teamworkText: {
-        en: "Ability to work with others to achieve a common goal. With the ability to collaborate, communicate and resolve conflicts.",
-        sp: "Habilidad para trabajar con otros para lograr un objetivo común. Con capacidad para colaborar, comunicarse y resolver conflictos."
-    },
-
-    problemSpan: {
-        en: "Problem resolution",
-        sp: "Resolución de problemas"
-    },
-
-    problemText: {
-        en: "Ability to identify and solve problems effectively. This includes the ability to think critically, to identify root causes, and to develop solutions.",
-        sp: "Habilidad para identificar y resolver problemas de manera efectiva. Esto incluye la capacidad de pensar críticamente, identificar las causas fundamentales y desarrollar soluciones."
-    },
-
-    responsabilitySpan: {
-        en: "Seriousness and responsibility",
-        sp: "Seriedad y responsabilidad"
-    },
-
-    responsabilityText: {
-        en: "Professional attitude and commitment to tasks and deadlines. Fulfillment of duties, proactive to solve problems and learn from mistakes.",
-        sp: "Actitud profesional y compromiso con las tareas y los plazos. Cumplimiento de deberes, proactivo para resolver problemas y aprender de los errores."
-    },
-
-    adaptabilitySpan: {
-        en: "Adaptability",
-        sp: "Adaptabilidad"
-    },
-
-    adaptabilityText: {
-        en: "Ability to adapt to changes in the environment. Being flexible, learning from new things and solving problems.",
-        sp: "Capacidad de adaptación a los cambios del entorno. Ser flexible, aprender de cosas nuevas y resolver problemas."
-    },
-
-    emotionalSpan: {
-        en: "Emotional intelligence",
-        sp: "Inteligencia emocional"
-    },
-
-    emotionalText: {
-        en: "Understand and manage one's own emotions and the emotions of others. Ability to be self-aware, to be empathetic and to manage conflict.",
-        sp: "Comprender y gestionar las propias emociones y las emociones de los demás. Habilidad para ser consciente de sí mismo, ser empático y manejar conflictos."
-    },
-
-    motivationSpan: {
-        en: "Motivation",
-        sp: "Motivación"
-    },
-
-    motivationText: {
-        en: "Ability to stay motivated and focused on achieving goals. Ability to set goals, develop a plan, and persevere through difficulties.",
-        sp: "Capacidad para mantenerse motivado y enfocado en el logro de objetivos. Habilidad para establecer metas, desarrollar un plan y perseverar a través de las dificultades."
-    },
-
-    titleHardSkills: {
-        en: "Hard Skills",
-        sp: "Habilidades duras"
-    },
-
-    frontend: {
-        en: "Front-End",
-        sp: "Front-End"
-    },
-
-    backend: {
-        en: "Back-End",
-        sp: "Back-End"
-    },
-
-    develop: {
-        en: "Develop",
-        sp: "Desarrollo"
-    },
-
-    tools: {
-        en: "Tools",
-        sp: "Herramientas"
-    },
-
-    metodologies: {
-        en: "Metodologies",
-        sp: "Metodologías"
-    },
-
-    educationTitle: {
-        en: "Education and Knowledge",
-        sp: "Educación y conocimientos"
-    },
-
-    analystTitle: {
-        en: "Systems Analyst",
-        sp: "Analista de Sistemas"
-    },
-
-    download1: {
-        en: "Download Certificate",
-        sp: "Descargar certificado"
-    },
-
-    download2: {
-        en: "Download Certificate",
-        sp: "Descargar certificado"
-    },
-
-    download3: {
-        en: "Download my Resume",
-        sp: "Descargar mi CV"
-    },
-
-    tudaiTitle: {
-        "en": "University Technician in Computer <br> Application Development",
-        "sp": "Técnico Universitario en Desarrollo <br> de Aplicaciones Informáticas"
-    },
-
-    contactTitle: {
-        en: "Contact Me",
-        sp: "Contáctame"
-    },
-    projectsTitle: {
-        en: "Projects",
-        sp: "Proyectos"
-    },
-    projectsPlaceholder: {
-        en: "Coming soon... I am working on some exciting projects to showcase here!",
-        sp: "Próximamente... ¡Estoy trabajando en proyectos emocionantes para mostrar aquí!"
-    },
-
-    project1Title: {
-        en: "Ale Martín - Pastry & Events",
-        sp: "Ale Martín - Repostería y Eventos"
-    },
-
-    project1Description: {
-        en: "Website designed for a professional pastry chef, which also includes sections for comprehensive event decoration. Attached are shots of the gallery and product catalog.",
-        sp: "Sitio web diseñado para una repostera profesional, que incluye también anexos para la decoración integral de eventos. Adjunto capturas de la galería y catálogo de productos."
-    },
-
-    project2Title: {
-        en: "Coordinemos",
-        sp: "Coordinemos"
-    },
-
-    project2Description: {
-        en: "App to coordinate padel court bookings among players, featuring schedule management, match organization, and communication between teammates. It makes it easy to set up teams and plan matches in an agile and collaborative way.",
-        sp: "App para coordinar turnos de pádel entre jugadores, con gestión de horarios, organización de partidos y comunicación entre compañeros. Facilita armar equipos y planificar encuentros de forma ágil y colaborativa."
-    },
-
-    project3Title: {
-        en: "PadelAdmin",
-        sp: "PadelAdmin"
-    },
-
-    project3Description: {
-        en: "Application aimed at helping padel clubs set up tournament fixtures, relieving them of the burden of manually handling scheduling constraints and preferences that players may have, as well as managing groups, standings, and elimination brackets.",
-        sp: "Aplicación orientada a ayudar a los clubes de pádel para armar fixture de torneos sacándoles de encima el problema de tener que contemplar a mano las restricciones y preferencias horarias que pueden tener uno o varios jugadores, además de gestionar las zonas, tablas de posiciones y brackets o llaves de fases eliminatorias."
-    },
-
-    project4Title: {
-        en: "CODE Solutions.ar",
-        sp: "CODE Solutions.ar"
-    },
-
-    project4Description: {
-        en: "Startup dedicated to business technology solutions, creating digital products and services to optimize processes, improve user experience, and scale businesses with an innovative, quality-driven approach.",
-        sp: "Start up propia dedicada a soluciones tecnológicas empresariales, desarrollando productos y servicios digitales orientados a optimizar procesos, mejorar la experiencia de usuario y escalar negocios. Sitio web corporativo y portfolio de servicios con enfoque en innovación y calidad."
-    },
-
-    name: {
-        en: "Name:",
-        sp: "Nombre:"
-    },
-
-    email: {
-        en: "Email:",
-        sp: "Correo electrónico:"
-    },
-
-    message: {
-        en: "Message:",
-        sp: "Mensaje:"
-    },
-
-    send_b: {
-        en: "Send",
-        sp: "Enviar"
+        contact_eyebrow: "Let's talk", contact_title: "Tell me about your project",
+        contact_sub: "Got an idea, or a process that runs on spreadsheets and WhatsApp today? Write to me and we'll turn it into software.",
+        form_name: "Name", form_email: "Email", form_msg: "Message", form_send: "Send message"
     }
 };
 
-
-
-function updateLanguage(language) {
-    for (const key in translations) {
-        const element = document.getElementById(key);
-        if (element) {
-            element.innerHTML = translations[key][language];
-        }
+// ---------- Skill tab data ----------
+const SKILLS = {
+    frontend: {
+        title: { es: "Front-End", en: "Front-End" },
+        text: {
+            es: "Me atrae por su relación directa con el cliente. Base sólida en HTML y CSS nativos, y experiencia con frameworks como Bootstrap y Vue, además de React en el ecosistema JS.",
+            en: "I enjoy it for its direct relationship with the user. Strong foundation in native HTML and CSS, plus experience with frameworks like Bootstrap and Vue, and React in the JS ecosystem."
+        },
+        logos: ["images/html.png", "images/css.png", "images/bootstrap-4-logo-svgrepo-com.svg", "images/vue.svg"]
+    },
+    backend: {
+        title: { es: "Back-End", en: "Back-End" },
+        text: {
+            es: "Conocimiento fuerte de lenguajes de back-end: Java para desarrollo versátil, JavaScript para interactividad dinámica y PHP para funcionalidad del lado del servidor.",
+            en: "Strong knowledge of back-end languages: Java for versatile development, JavaScript for dynamic interactivity and PHP for server-side functionality."
+        },
+        logos: ["images/java.png", "images/js.svg", "images/php-1-logo-svgrepo-com.svg", "images/postgresql-logo-svgrepo-com.svg"]
+    },
+    develop: {
+        title: { es: "Desarrollo", en: "Development" },
+        text: {
+            es: "Lenguajes como Java, JavaScript y Python para desarrollo ágil y soluciones eficientes, junto a distintas técnicas, métodos y algoritmos.",
+            en: "Languages like Java, JavaScript and Python for agile development and efficient solutions, along with different techniques, methods and algorithms."
+        },
+        logos: ["images/java.png", "images/js.svg", "images/python.png", "images/mysql-logo-svgrepo-com.svg"]
+    },
+    tools: {
+        title: { es: "Herramientas", en: "Tools" },
+        text: {
+            es: "Git para control de versiones, GitHub para colaboración de repositorios, Trello para gestión de proyectos y Draw.io para diagramas y visualización de ideas.",
+            en: "Git for version control, GitHub for repository collaboration, Trello for project management and Draw.io for diagrams and visualizing ideas."
+        },
+        logos: ["images/git.png", "images/github-color-svgrepo-com.svg", "images/trello-logo-svgrepo-com.svg", "images/Diagrams.net_Logo.svg.png"]
+    },
+    methods: {
+        title: { es: "Metodologías", en: "Methodologies" },
+        text: {
+            es: "Metodologías de desarrollo, destacando Scrum: equipos ágiles, sprints, planificación y seguimiento para entregar de forma colaborativa y eficiente.",
+            en: "Development methodologies, especially Scrum: agile teams, sprints, planning and tracking to deliver in a collaborative and efficient way."
+        },
+        logos: ["images/scrum.svg"]
     }
-}
+};
 
-const englishFlag = document.querySelector('.englishLanguage');
-const spanishFlag = document.querySelector('.spanishLanguage');
-const hard = document.getElementById('frontend');
+// ---------- State ----------
+let currentLang = localStorage.getItem("lang") || "es";
+let currentSkill = "frontend";
 
-// Initialize page language on first load
-// Initialize page language on first load
-    document.addEventListener('DOMContentLoaded', () => {
-        updateLanguage(language);
-        hard.click();
+// ---------- i18n apply ----------
+function applyLang(lang) {
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+    document.documentElement.lang = lang;
+
+    const dict = I18N[lang];
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key] !== undefined) el.innerHTML = dict[key];
     });
 
-englishFlag.addEventListener('click', function () {
-    language = 'en';
-    hard.click();
-    updateLanguage(language);
-});
+    document.querySelectorAll(".lang-btn").forEach(b =>
+        b.classList.toggle("is-active", b.dataset.lang === lang));
 
-spanishFlag.addEventListener('click', function () {
-    language = 'sp'
-    hard.click();
-    updateLanguage(language);
-});
-
-function inicializar_img() {
-    img1.style.display = "inline-block";
-    img2.style.display = "inline-block";
-    img3.style.display = "inline-block";
-    img4.style.display = "inline-block";
+    renderSkill(currentSkill);
 }
 
-// Logic for Image Modal
+// ---------- Skills ----------
+function renderSkill(key) {
+    currentSkill = key;
+    const data = SKILLS[key];
+    if (!data) return;
+
+    document.getElementById("skillTitle").textContent = data.title[currentLang];
+    document.getElementById("skillText").textContent = data.text[currentLang];
+
+    const box = document.getElementById("skillLogos");
+    box.innerHTML = "";
+    data.logos.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "";
+        img.loading = "lazy";
+        box.appendChild(img);
+    });
+
+    document.querySelectorAll("#skillTabs .tab").forEach(t =>
+        t.classList.toggle("is-active", t.dataset.skill === key));
+}
+
+// ---------- Init ----------
 document.addEventListener("DOMContentLoaded", () => {
+    // Year
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Language buttons
+    document.querySelectorAll(".lang-btn").forEach(btn =>
+        btn.addEventListener("click", () => applyLang(btn.dataset.lang)));
+
+    // Skill tabs
+    document.querySelectorAll("#skillTabs .tab").forEach(tab =>
+        tab.addEventListener("click", () => renderSkill(tab.dataset.skill)));
+
+    // Initial render
+    applyLang(currentLang);
+
+    // Mobile menu
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    menuToggle.addEventListener("click", () => {
+        const open = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(open));
+    });
+    navLinks.querySelectorAll("a").forEach(a =>
+        a.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        }));
+
+    // Sticky nav shadow
+    const topnav = document.getElementById("topnav");
+    const onScroll = () => topnav.classList.toggle("scrolled", window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+    // Active nav link on scroll
+    const sections = ["home", "skills", "projects", "about", "education", "contact"];
+    const linkFor = id => document.querySelector(`#navLinks a[href="#${id}"]`);
+    const spy = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                document.querySelectorAll("#navLinks a").forEach(a => a.classList.remove("active"));
+                const link = linkFor(e.target.id);
+                if (link) link.classList.add("active");
+            }
+        });
+    }, { threshold: 0.5 });
+    sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) spy.observe(el);
+    });
+
+    // Image modal / lightbox
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImage");
-    const closeBtn = document.querySelector(".close-modal");
-
-    // Select all gallery images
-    const galleryImages = document.querySelectorAll(".gallery-img");
-
-    galleryImages.forEach(img => {
-        img.addEventListener("click", () => {
-            modal.style.display = "flex";
-            modal.style.justifyContent = "center";
-            modal.style.alignItems = "center";
-            modalImg.src = img.src;
-            document.body.style.overflow = "hidden"; // Prevent scrolling
-        });
-    });
-
     const closeModal = () => {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto"; // Restore scrolling
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
     };
-
-    closeBtn.addEventListener("click", closeModal);
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-
-    // Close on Escape key
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && modal.style.display === "flex") {
-            closeModal();
-        }
+    document.querySelectorAll(".gallery-img").forEach(img =>
+        img.addEventListener("click", () => {
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modal.classList.add("open");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        }));
+    modal.querySelector(".modal-close").addEventListener("click", closeModal);
+    modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
     });
 });

@@ -1,309 +1,419 @@
-<html lang="en">
 <!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Claudio Carmusciano</title>
-    <link rel="shortcut icon" type="xl-icon" href="./images/logo.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Claudio Carmusciano — Full Stack Developer</title>
+    <meta name="description"
+        content="Claudio Carmusciano — Desarrollador Full Stack. Construyo aplicaciones web a medida tipo SaaS, de la idea a producción.">
+    <meta name="theme-color" content="#0a0e14">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Claudio Carmusciano — Full Stack Developer">
+    <meta property="og:description" content="Construyo aplicaciones web a medida tipo SaaS, de la idea a producción.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.png">
+
+    <link rel="shortcut icon" type="image/png" href="./images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <div class="container">
-        <header class="header">
-            <a href="#home" class="logoHome">
-                <img class="logo" src="images/logo.png" alt="Logo">
+    <!-- Decorative background -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <!-- ===== NAV ===== -->
+    <header class="nav" id="topnav">
+        <div class="nav-inner">
+            <a href="#home" class="brand">
+                <img src="images/logo.png" alt="Logo Claudio Carmusciano" class="brand-logo">
+                <span class="brand-name">Claudio<span class="brand-dot">.</span>Carmusciano</span>
             </a>
-            <button id="open" class="open-menu"><i class="bi bi-list"></i></button>
 
-            <nav class="nav" id="nav">
-                <button class="close-menu" id="close"><i class="bi bi-x"></i></button>
-                <ul class="nav-list">
-                    <a href="#english" class="englishLanguage">
-                        <img src="images/eng.png" class="flag" alt="englishFlag">
-                    </a>
-                    <a href="#spanish" class="spanishLanguage">
-                        <img src="images/spa.png" class="flag" alt="spanishFlag">
-                    </a>
-                    <li><a id="home-a" href="#home">Home</a></li>
-                    <li><a id="skills-a" href="#skills">Skills</a></li>
-                    <li><a id="projects-a" href="#projects">Projects</a></li>
-                    <li><a id="aboutMe-a" href="#aboutMe">About Me</a></li>
-                    <li><a id="socialNetworks-a" href="#socialNetworks">Social Networks</a></li>
-                    <li><a id="education-a" href="#education">Education</a></li>
-                    <li><a id="download3" href="CV_Claudio_Carmusciano.pdf" target="_blank">Download my Resume</a></li>
-                    <li><a id="contactMe-a" href="#contactMe">Contact Me</a></li>
-                </ul>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" data-i18n="nav_home">Inicio</a>
+                <a href="#skills" data-i18n="nav_skills">Habilidades</a>
+                <a href="#projects" data-i18n="nav_projects">Proyectos</a>
+                <a href="#about" data-i18n="nav_about">Sobre mí</a>
+                <a href="#education" data-i18n="nav_education">Educación</a>
+                <a href="#contact" data-i18n="nav_contact">Contacto</a>
             </nav>
-        </header>
 
-        <div class="title" id="home">
-            <h3 class="principal" id="principal">Hi, my name is Claudio Carmusciano.<br>
-                Full Stack Developer.</h3>
-        </div>
-        <div id="subtitle" class="subtitle">
-            I love what I do and enjoy what I do.
-        </div>
-        <div class="avatar">
-            <img src="images/emoji1.png" alt="">
-        </div>
-        <div class="icons">
-            <img src="images/graph.png" alt="">
-        </div>
-
-        <div class="skills" id="skills">
-
-            <div class="hardSkills">
-                <div class="titleSkill">
-                    <h3 id="titleHardSkills">Hard Skills</h3>
+            <div class="nav-actions">
+                <div class="lang-switch" role="group" aria-label="Idioma / Language">
+                    <button class="lang-btn is-active" data-lang="es" aria-label="Español">ES</button>
+                    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
                 </div>
-                <div class="hardSkillsDiv">
-                    <div class="hardSkillsAnchors">
-                        <a href="#" id="frontend">Front-End</a>
-                        <a href="#" id="backend">Back-End</a>
-                        <a href="#" id="develop">Develop</a>
-                        <a href="#" id="tools">Tools</a>
-                        <a href="#" id="metodologies">Metodologies</a>
-                    </div>
-                    <div class="hardSkillsDetails">
-                        <div class="detailsDiv">
-                            <h4 id="hardSkillTitle"></h4>
-                            <p id="hardSkillText"></p>
-                            <div class="imagesSkills">
-                                <img id="img1" alt="">
-                                <img id="img2" alt="">
-                                <img id="img3" alt="">
-                                <img id="img4" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="softSkills">
-                <div class="titleSkill">
-                    <h3 id="titleSoftSkills">Soft Skills</h3>
-                </div>
-                <div class="detailsSkills">
-                    <div class="divSkills">
-                        <img class="iconSkills" src="images/communicationIcon.png" alt="">
-                        <p> <span id="communicationSpan" class="highlighted centered-span">Communication</span> <br>
-                            <Ability id="communicationText">Effective communication with others, both verbal and
-                                non-verbal. Ability to listen, speak, write and read.
-                        </p>
-                        </p>
-                    </div>
-                    <div class="divSkills">
-                        <img class="iconSkills" src="images/teamIcon.png" alt="">
-                        <p> <span id="teamworkSpan" class="highlighted centered-span">Teamwork</span><br>
-                        <p id="teamworkText"> Ability to work with others to achieve a common goal. With the ability to
-                            collaborate, communicate and resolve conflicts.</p>
-                        </p>
-                    </div>
-                    <div class="divSkills">
-                        <img class="iconSkills" src="images/problemIcon.png" alt="">
-                        <p> <span id="problemSpan" class="highlighted centered-span">Problem resolution</span><br>
-                        <p id="problemText">Ability to identify and solve problems effectively. This includes the
-                            ability to think critically, to identify root causes, and to develop solutions.</p>
-                        </p>
-                    </div>
-
-                    <div class="divSkills">
-                        <img class="iconSkills" src="images/responsabilityIcon.png" alt="">
-                        <p> <span id="responsabilitySpan" class="highlighted centered-span">Seriousness and
-                                responsibility</span><br>
-                        <p id="responsabilityText">Professional attitude and commitment to tasks and deadlines.
-                            Fulfillment of duties, proactive to solve problems and learn from mistakes.</p>
-                        </p>
-                    </div>
-                    <div class="divSkills">
-                        <img class="iconSkills" src="images/adaptabilityIcon.png" alt="">
-                        <p> <span id="adaptabilitySpan" class="highlighted centered-span">Adaptability</span><br>
-                        <p id="adaptabilityText"> Ability to adapt to changes in the environment. Being flexible,
-                            learning from new things and solving problems.</p>
-                        </p>
-                    </div>
-                    <div class="divSkills">
-                        <img class="iconSkills" src="images/emotionIcon.png" alt="">
-                        <p> <span id="emotionalSpan" class="highlighted centered-span">Emotional intelligence</span><br>
-                        <p id="emotionalText">Understand and manage one's own emotions and the emotions of others.
-                            Ability to be self-aware, to be empathetic and to manage conflict.</p>
-                        </p>
-                    </div>
-                    <div class="divSkills">
-                        <img class="iconSkills" src="images/motivationIcon.png" alt="">
-                        <p> <span id="motivationSpan" class="highlighted centered-span">Motivation</span> <br>
-                        <p id="motivationText">Ability to stay motivated and focused on achieving goals. Ability to set
-                            goals, develop a plan, and persevere through difficulties.</p>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="projects" id="projects">
-            <div class="titleProjects">
-                <h3 id="projectsTitle">Projects</h3>
-            </div>
-            <div class="projectsContent">
-                <div class="project-card">
-                    <h4 id="project1Title">Ale Martín - Repostería y Eventos</h4>
-                    <p id="project1Description">Sitio web diseñado para una repostera profesional, que incluye también
-                        anexos para la decoración integral de eventos. Adjunto capturas de la galería y catálogo de
-                        productos.</p>
-                    <div class="project-gallery">
-                        <img src="images/Captura de pantalla alemartin01.png" alt="Captura 1" class="gallery-img">
-                        <img src="images/Captura de pantalla alemartin02.png" alt="Captura 2" class="gallery-img">
-                        <img src="images/Captura de pantalla alemartin03.png" alt="Captura 3" class="gallery-img">
-                        <img src="images/Captura de pantalla alemartin04.png" alt="Captura 4" class="gallery-img">
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h4 id="project2Title">Coordinemos</h4>
-                    <p id="project2Description">App para coordinar turnos de pádel entre jugadores, con gestión de horarios,
-                        organización de partidos y comunicación entre compañeros. Facilita armar equipos y planificar
-                        encuentros de forma ágil y colaborativa.</p>
-                    <div class="project-gallery">
-                        <img src="images/AppCoordinemosPortada.png" alt="Captura 1" class="gallery-img">
-                        <img src="images/AppCoordinemosCaptura01.png" alt="Captura 2" class="gallery-img">
-                        <img src="images/AppCoordinemosCaptura02.png" alt="Captura 3" class="gallery-img">
-                        <img src="images/AppCoordinemosCaptura03.png" alt="Captura 4" class="gallery-img">
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h4 id="project3Title">PadelAdmin</h4>
-                    <p id="project3Description">Aplicación orientada a ayudar a los clubes de pádel para armar fixture de torneos sacándoles de encima el problema de tener que contemplar a mano las restricciones y preferencias horarias que pueden tener uno o varios jugadores, además de gestionar las zonas, tablas de posiciones y brackets o llaves de fases eliminatorias.</p>
-                    <div class="project-gallery">
-                        <img src="images/PadelAdmin01.png" alt="Captura 1" class="gallery-img">
-                        <img src="images/PadelAdmin02.png" alt="Captura 2" class="gallery-img">
-                        <img src="images/PadelAdmin03.png" alt="Captura 3" class="gallery-img">
-                        <img src="images/PadelAdmin04.png" alt="Captura 4" class="gallery-img">
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h4 id="project4Title">CODE Solutions.ar</h4>
-                    <p id="project4Description">Start up propia dedicada a soluciones tecnológicas empresariales, desarrollando productos y servicios digitales orientados a optimizar procesos, mejorar la experiencia de usuario y escalar negocios. Sitio web corporativo y portfolio de servicios con enfoque en innovación y calidad.</p>
-                    <p><a href="https://code-solutions.ar" target="_blank" rel="noopener noreferrer">Visitar code-solutions.ar</a></p>
-                    <div class="project-gallery">
-                        <img src="images/code-solutions-01.png" alt="Captura 1" class="gallery-img">
-                        <img src="images/code-solutions-02.png" alt="Captura 2" class="gallery-img">
-                        <img src="images/code-solutions-03.png" alt="Captura 3" class="gallery-img">
-                        <img src="images/code-solutions-04.png" alt="Captura 4" class="gallery-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="aboutMe" id="aboutMe">
-            <div id="titleAboutMe" class="titleAboutMe">
-                About Me
-            </div>
-            <div class="textAboutMe">
-                <p id="textAboutMe" style="text-indent: 15px;">I consider myself a person who wants to learn and
-                    undertake.
-                    My main characteristics: responsible, friendly, helpful, reliable.
-                    Excellent interaction with other people.
-                    I adapt to all types of respectful work environment.
-                    I am passionate about computers and technology.
-                    I am excited and eager to explore new possibilities and challenges in my career
-                    in order to gain extensive experience in all things programming.</p>
-            </div>
-
-        </div>
-
-        <div class="socialNetworks" id="socialNetworks">
-            <div class="titleSocialNetworks">
-                <h3 id="titleSocialNetworks">My Social Networks</h3>
-            </div>
-            <div class="logosSocialNetworks">
-                <button id="facebookButton" onclick="handleFacebookButtonClick()">
-                    <img src="images/logoFacebook.png" alt="">
-                </button>
-                <button id="gitHubButton" onclick="handleGitHubButtonClick()">
-                    <img src="images/logoGitHub.png" alt="">
-                </button>
-                <button id="instagramButton" onclick="handleInstagramButtonClick()">
-                    <img src="images/logoInstagram.png" alt="">
-                </button>
-                <button id="linkedInButton" onclick="handleLinkedInButtonClick()">
-                    <img src="images/logoLinkedIn.png" alt="">
+                <a href="CV_Claudio_Carmusciano.pdf" target="_blank" rel="noopener" class="btn btn-ghost btn-cv">
+                    <i class="bi bi-download"></i><span data-i18n="nav_cv">CV</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false">
+                    <i class="bi bi-list"></i>
                 </button>
             </div>
         </div>
+    </header>
 
-
-        <div class="education" id="education">
-            <div class="educationTitle">
-                <h3 id="educationTitle">Education and Knowledge</h3>
-            </div>
-            <div class="educationTitles">
-                <div class="individualTitle">
-                    <img id="imgAnalist" src="images/analista.jpg.webp" alt="">
-                    <h4 id="analystTitle">Systems Analyst</h4>
-                    <a href="SystemAnalyst.pdf" download>
-                        <button id="download1" class="moreDetails">Download Certificate</button></a>
+    <main>
+        <!-- ===== HERO ===== -->
+        <section class="hero" id="home">
+            <div class="hero-text reveal">
+                <span class="pill"><span class="pill-dot"></span><span data-i18n="hero_pill">Disponible para
+                        proyectos</span></span>
+                <h1 class="hero-title">
+                    <span data-i18n="hero_hi">Hola, soy</span>
+                    <span class="grad">Claudio Carmusciano</span>
+                </h1>
+                <p class="hero-role" data-i18n="hero_role">Desarrollador Full Stack</p>
+                <p class="hero-sub" data-i18n="hero_sub">
+                    Construyo aplicaciones web a medida tipo SaaS —de la idea a producción— combinando ingeniería sólida
+                    con features potenciados por IA.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span data-i18n="hero_cta1">Ver proyectos</span><i class="bi bi-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="hero_cta2">Contactame</a>
                 </div>
-                <div class="individualTitle">
-                    <img id="imgTudai" src="images/tudai.jpeg" alt="">
-                    <h4 id="tudaiTitle">University Technician in Computer <br> Application Development</h4>
-                    <a href="TUDAI.pdf" download>
-                        <button id="download2" class="moreDetails">Download Certificate</button></a>
+                <div class="hero-social">
+                    <a href="https://github.com/claudiocarmusciano" target="_blank" rel="noopener" aria-label="GitHub"><i
+                            class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/claudio-carmusciano-ab993224a/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/claudiocarmusciano" target="_blank" rel="noopener"
+                        aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/claudiocarmu" target="_blank" rel="noopener"
+                        aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual reveal">
+                <div class="avatar-blob">
+                    <img src="images/emoji1.png" alt="Avatar de Claudio Carmusciano" class="avatar-img">
+                </div>
+                <div class="float-chip chip-1"><i class="bi bi-code-slash"></i> Java · Spring</div>
+                <div class="float-chip chip-2"><i class="bi bi-lightning-charge"></i> React · Next.js</div>
+                <div class="float-chip chip-3"><i class="bi bi-robot"></i> IA aplicada</div>
+            </div>
+        </section>
+
+        <!-- ===== STATS / STACK STRIP ===== -->
+        <section class="strip reveal">
+            <div class="strip-item">
+                <span class="strip-num">Full-stack</span>
+                <span class="strip-label" data-i18n="strip1">De punta a punta</span>
+            </div>
+            <div class="strip-item">
+                <span class="strip-num">SaaS</span>
+                <span class="strip-label" data-i18n="strip2">Multi-tenant y por roles</span>
+            </div>
+            <div class="strip-item">
+                <span class="strip-num">CI/CD</span>
+                <span class="strip-label" data-i18n="strip3">En producción, mantenido</span>
+            </div>
+            <div class="strip-item">
+                <span class="strip-num">IA</span>
+                <span class="strip-label" data-i18n="strip4">Aplicada con criterio</span>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section class="section" id="skills">
+            <div class="section-head reveal">
+                <span class="eyebrow" data-i18n="skills_eyebrow">Lo que manejo</span>
+                <h2 class="section-title" data-i18n="skills_title">Habilidades</h2>
+            </div>
+
+            <!-- Hard skills -->
+            <div class="skills-hard reveal">
+                <div class="tabs" id="skillTabs">
+                    <button class="tab is-active" data-skill="frontend" data-i18n="tab_frontend">Front-End</button>
+                    <button class="tab" data-skill="backend" data-i18n="tab_backend">Back-End</button>
+                    <button class="tab" data-skill="develop" data-i18n="tab_develop">Desarrollo</button>
+                    <button class="tab" data-skill="tools" data-i18n="tab_tools">Herramientas</button>
+                    <button class="tab" data-skill="methods" data-i18n="tab_methods">Metodologías</button>
+                </div>
+                <div class="tab-panel card">
+                    <div class="tab-panel-text">
+                        <h3 id="skillTitle"></h3>
+                        <p id="skillText"></p>
+                    </div>
+                    <div class="tab-logos" id="skillLogos"></div>
                 </div>
             </div>
 
+            <!-- Soft skills -->
+            <h3 class="subhead reveal" data-i18n="soft_title">Habilidades blandas</h3>
+            <div class="soft-grid">
+                <article class="card soft reveal">
+                    <i class="bi bi-chat-dots soft-ico"></i>
+                    <h4 data-i18n="soft_comm_t">Comunicación</h4>
+                    <p data-i18n="soft_comm_d">Comunicación efectiva, verbal y no verbal. Saber escuchar, hablar,
+                        escribir y leer.</p>
+                </article>
+                <article class="card soft reveal">
+                    <i class="bi bi-people soft-ico"></i>
+                    <h4 data-i18n="soft_team_t">Trabajo en equipo</h4>
+                    <p data-i18n="soft_team_d">Colaborar con otros hacia un objetivo común, comunicando y resolviendo
+                        conflictos.</p>
+                </article>
+                <article class="card soft reveal">
+                    <i class="bi bi-lightbulb soft-ico"></i>
+                    <h4 data-i18n="soft_prob_t">Resolución de problemas</h4>
+                    <p data-i18n="soft_prob_d">Identificar y resolver problemas: pensar críticamente, hallar la causa
+                        raíz y desarrollar soluciones.</p>
+                </article>
+                <article class="card soft reveal">
+                    <i class="bi bi-shield-check soft-ico"></i>
+                    <h4 data-i18n="soft_resp_t">Seriedad y responsabilidad</h4>
+                    <p data-i18n="soft_resp_d">Actitud profesional y compromiso con las tareas y los plazos. Proactivo
+                        para resolver y aprender.</p>
+                </article>
+                <article class="card soft reveal">
+                    <i class="bi bi-arrow-repeat soft-ico"></i>
+                    <h4 data-i18n="soft_adap_t">Adaptabilidad</h4>
+                    <p data-i18n="soft_adap_d">Adaptación a los cambios del entorno: ser flexible y aprender de lo
+                        nuevo.</p>
+                </article>
+                <article class="card soft reveal">
+                    <i class="bi bi-heart-pulse soft-ico"></i>
+                    <h4 data-i18n="soft_emo_t">Inteligencia emocional</h4>
+                    <p data-i18n="soft_emo_d">Comprender y gestionar las propias emociones y las de los demás. Empatía y
+                        manejo de conflictos.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section class="section" id="projects">
+            <div class="section-head reveal">
+                <span class="eyebrow" data-i18n="projects_eyebrow">Trabajo real, en producción</span>
+                <h2 class="section-title" data-i18n="projects_title">Proyectos</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Ale Martín -->
+                <article class="card project reveal">
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="tag">Sitio web</span><span class="tag">Diseño</span>
+                        </div>
+                        <h3 data-i18n="p1_t">Ale Martín — Repostería y Eventos</h3>
+                        <p data-i18n="p1_d">Sitio web para una repostera profesional, con sección de decoración integral
+                            de eventos, galería y catálogo de productos.</p>
+                    </div>
+                    <div class="project-gallery">
+                        <img src="images/Captura de pantalla alemartin01.png" alt="Ale Martín 1" class="gallery-img"
+                            loading="lazy">
+                        <img src="images/Captura de pantalla alemartin02.png" alt="Ale Martín 2" class="gallery-img"
+                            loading="lazy">
+                        <img src="images/Captura de pantalla alemartin03.png" alt="Ale Martín 3" class="gallery-img"
+                            loading="lazy">
+                        <img src="images/Captura de pantalla alemartin04.png" alt="Ale Martín 4" class="gallery-img"
+                            loading="lazy">
+                    </div>
+                </article>
+
+                <!-- Coordinemos -->
+                <article class="card project reveal">
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span><span class="tag">App web</span>
+                        </div>
+                        <h3 data-i18n="p2_t">Coordinemos</h3>
+                        <p data-i18n="p2_d">App para coordinar turnos de pádel entre jugadores: gestión de horarios,
+                            organización de partidos y comunicación entre compañeros de forma ágil y colaborativa.</p>
+                    </div>
+                    <div class="project-gallery">
+                        <img src="images/AppCoordinemosPortada.png" alt="Coordinemos 1" class="gallery-img"
+                            loading="lazy">
+                        <img src="images/AppCoordinemosCaptura01.png" alt="Coordinemos 2" class="gallery-img"
+                            loading="lazy">
+                        <img src="images/AppCoordinemosCaptura02.png" alt="Coordinemos 3" class="gallery-img"
+                            loading="lazy">
+                        <img src="images/AppCoordinemosCaptura03.png" alt="Coordinemos 4" class="gallery-img"
+                            loading="lazy">
+                    </div>
+                </article>
+
+                <!-- PadelAdmin -->
+                <article class="card project reveal">
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="tag">Spring Boot</span><span class="tag">React</span><span
+                                class="tag">Multi-tenant</span>
+                        </div>
+                        <h3 data-i18n="p3_t">PadelAdmin</h3>
+                        <p data-i18n="p3_d">Plataforma para clubes de pádel: arma el fixture de torneos contemplando
+                            restricciones y preferencias horarias de los jugadores, y gestiona zonas, tablas de
+                            posiciones y llaves eliminatorias.</p>
+                    </div>
+                    <div class="project-gallery">
+                        <img src="images/PadelAdmin01.png" alt="PadelAdmin 1" class="gallery-img" loading="lazy">
+                        <img src="images/PadelAdmin02.png" alt="PadelAdmin 2" class="gallery-img" loading="lazy">
+                        <img src="images/PadelAdmin03.png" alt="PadelAdmin 3" class="gallery-img" loading="lazy">
+                        <img src="images/PadelAdmin04.png" alt="PadelAdmin 4" class="gallery-img" loading="lazy">
+                    </div>
+                </article>
+
+                <!-- CODE Solutions -->
+                <article class="card project reveal">
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="tag">Startup</span><span class="tag">React · Vite</span>
+                        </div>
+                        <h3 data-i18n="p4_t">CODE Solutions.ar</h3>
+                        <p data-i18n="p4_d">Startup propia de soluciones tecnológicas empresariales: productos y
+                            servicios digitales para optimizar procesos, mejorar la experiencia de usuario y escalar
+                            negocios.</p>
+                        <a href="https://code-solutions.ar" target="_blank" rel="noopener" class="project-link">
+                            <i class="bi bi-box-arrow-up-right"></i> code-solutions.ar
+                        </a>
+                    </div>
+                    <div class="project-gallery">
+                        <img src="images/code-solutions-01.png" alt="CODE Solutions 1" class="gallery-img"
+                            loading="lazy">
+                        <img src="images/code-solutions-02.png" alt="CODE Solutions 2" class="gallery-img"
+                            loading="lazy">
+                        <img src="images/code-solutions-03.png" alt="CODE Solutions 3" class="gallery-img"
+                            loading="lazy">
+                        <img src="images/code-solutions-04.png" alt="CODE Solutions 4" class="gallery-img"
+                            loading="lazy">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section class="section" id="about">
+            <div class="about-wrap">
+                <div class="about-visual reveal">
+                    <div class="about-photo">
+                        <img src="images/emoji1.png" alt="Claudio Carmusciano">
+                    </div>
+                </div>
+                <div class="about-text reveal">
+                    <span class="eyebrow" data-i18n="about_eyebrow">Sobre mí</span>
+                    <h2 class="section-title" data-i18n="about_title">Ingeniería con foco en el negocio</h2>
+                    <p data-i18n="about_p1">Me considero una persona con ganas de aprender y emprender: responsable,
+                        confiable y con excelente trato. Me apasionan la informática y la tecnología, y disfruto
+                        explorar nuevos desafíos.</p>
+                    <p data-i18n="about_p2">Entiendo el dominio del negocio antes de programar —reglas, roles y flujos
+                        reales— y modelo el software alrededor de eso. Construyo en una rama, pruebo en local, valido con
+                        el cliente y recién entonces despliego a producción.</p>
+                    <div class="about-values">
+                        <span class="value-chip"><i class="bi bi-check2-circle"></i> <span
+                                data-i18n="about_v1">Full-stack de punta a punta</span></span>
+                        <span class="value-chip"><i class="bi bi-check2-circle"></i> <span data-i18n="about_v2">A medida,
+                                no genérico</span></span>
+                        <span class="value-chip"><i class="bi bi-check2-circle"></i> <span data-i18n="about_v3">IA
+                                aplicada con criterio</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EDUCATION ===== -->
+        <section class="section" id="education">
+            <div class="section-head reveal">
+                <span class="eyebrow" data-i18n="edu_eyebrow">Formación</span>
+                <h2 class="section-title" data-i18n="edu_title">Educación y conocimientos</h2>
+            </div>
+            <div class="edu-grid">
+                <article class="card edu reveal">
+                    <img src="images/analista.jpg.webp" alt="Analista de Sistemas" class="edu-img">
+                    <div class="edu-body">
+                        <h3 data-i18n="edu1_t">Analista de Sistemas</h3>
+                        <a href="SystemAnalyst.pdf" download class="btn btn-outline btn-sm">
+                            <i class="bi bi-file-earmark-pdf"></i> <span data-i18n="edu_cert">Ver certificado</span>
+                        </a>
+                    </div>
+                </article>
+                <article class="card edu reveal">
+                    <img src="images/tudai.jpeg" alt="TUDAI" class="edu-img">
+                    <div class="edu-body">
+                        <h3 data-i18n="edu2_t">Técnico Universitario en Desarrollo de Aplicaciones Informáticas</h3>
+                        <a href="TUDAI.pdf" download class="btn btn-outline btn-sm">
+                            <i class="bi bi-file-earmark-pdf"></i> <span data-i18n="edu_cert">Ver certificado</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section" id="contact">
+            <div class="contact-wrap card reveal">
+                <div class="contact-info">
+                    <span class="eyebrow" data-i18n="contact_eyebrow">Hablemos</span>
+                    <h2 class="section-title" data-i18n="contact_title">Contame tu proyecto</h2>
+                    <p data-i18n="contact_sub">¿Tenés una idea o un proceso que hoy funciona a planilla y WhatsApp?
+                        Escribime y lo convertimos en software.</p>
+                    <div class="contact-links">
+                        <a href="mailto:claudiocarmu@gmail.com"><i class="bi bi-envelope"></i>
+                            claudiocarmu@gmail.com</a>
+                        <a href="https://github.com/claudiocarmusciano" target="_blank" rel="noopener"><i
+                                class="bi bi-github"></i> github.com/claudiocarmusciano</a>
+                        <a href="https://www.linkedin.com/in/claudio-carmusciano-ab993224a/" target="_blank"
+                            rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+                <form action="https://formsubmit.co/claudiocarmusciano@gmail.com" method="POST" class="contact-form">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde el portfolio">
+                    <div class="field">
+                        <label for="name" data-i18n="form_name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email" data-i18n="form_email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="message" data-i18n="form_msg">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span data-i18n="form_send">Enviar mensaje</span><i class="bi bi-send"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="brand-name">Claudio<span class="brand-dot">.</span>Carmusciano</span>
+            <div class="footer-social">
+                <a href="https://github.com/claudiocarmusciano" target="_blank" rel="noopener" aria-label="GitHub"><i
+                        class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/claudio-carmusciano-ab993224a/" target="_blank" rel="noopener"
+                    aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/claudiocarmusciano" target="_blank" rel="noopener"
+                    aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/claudiocarmu" target="_blank" rel="noopener" aria-label="Facebook"><i
+                        class="bi bi-facebook"></i></a>
+            </div>
+            <span class="footer-copy">© <span id="year"></span> Claudio Carmusciano</span>
         </div>
+    </footer>
 
-        <div class="contactMe" id="contactMe">
-            <h1 id="contactTitle">Contact Me</h1>
-            <div class="generalForm">
-                <div class="form">
-                    <form action="https://formsubmit.co/claudiocarmusciano@gmail.com" method="POST" class="contactForm"
-                        id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required="">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required="">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" required=""></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button id="send_b" class="contactMeButton" type="submit">Send</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="avatarForm">
-                    <img class="formAvatar" src="images/Avatar.png" alt="">
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal">
-        <span class="close-modal">&times;</span>
-        <img class="modal-content" id="modalImage">
+    <!-- Image modal -->
+    <div id="imageModal" class="modal" aria-hidden="true">
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+        <img class="modal-img" id="modalImage" alt="">
     </div>
 
     <script src="js/script.js"></script>
-    <script>
-        const scroll = new SmoothScroll('a[href*="#"]', {
-            speed: 1200,
-            offset: 100
-        });
-    </script>
 </body>
 
 </html>
